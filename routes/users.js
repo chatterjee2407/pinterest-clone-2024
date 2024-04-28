@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
 
 mongoose
-  .connect(
-    "mongodb+srv://somnathc276:vNxvpWU5zmUsBN7x@pinterest.vjjudfk.mongodb.net/?retryWrites=true&w=majority&appName=Pinterest"
-  )
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Connected"))
   .catch((err) => console.log("Mongo error:", err));
 
