@@ -5,6 +5,6 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "next.config.js" }
+    { "src": "/(.*)", "dest": "/bin/www" }
   ]
 }
